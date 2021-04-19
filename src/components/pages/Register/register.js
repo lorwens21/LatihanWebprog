@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import NavBar from '../../molecules/NavBar';
 
 const Register = () => {
 
@@ -21,7 +22,8 @@ const Register = () => {
     }
 
     return (
-    <div class="container ms-10 mt-5 p-5" >
+    <div className="container">
+        <NavBar/>
       <h3>Register</h3>
       <p>Fullname</p>
       <input placeholder="Masukan Fullname" value={fullname} onChange={(e) => setFullname(e.target.value)}/>
@@ -30,12 +32,12 @@ const Register = () => {
       <p>Email</p>
       <input placeholder="Masukan email" value={email} onChange={(e) => setEmail(e.target.value)}/>
       <p>Phone</p>
-      <input placeholder="Masukan nomor"type="number" value={phone} onChange={(e) => setPhone(e.target.value)}/>
+      <input placeholder="Masukan nomor"type="text" value={phone} onChange={(e) => setPhone(e.target.value)}/>
       <p>Address</p>
       <input placeholder="Masukan alamat" value={address} onChange={(e) => setAddres(e.target.value)}/>
       <br></br>
       <br></br>
-      <button type="button" onClick = {handlesubmit} className="btn btn-danger" class="btn btn-outline-danger">Submit</button>
+      <button type="button" onClick = {handlesubmit} class="btn btn-secondary btn-sm">Submit</button>
     </div>
     );
 }

@@ -1,13 +1,13 @@
 import React from "react";
-import Login from "./component/login"
-import Register from "./component/register"
+import Routes from './components/config/routes';
+
 
 const App = () => {
   return(
-    <div>
-      <Login/>
-      <Register/>
-    </div>
+    //JSX
+     <Routes />
   );
-}
+}; 
+
+
 export default App;
